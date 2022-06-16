@@ -1,0 +1,16 @@
+from ClassManejador import Man
+if __name__ == '__main__':
+    Num=int(input("Ingrese la cantidad de calefactores a almacenar (de 1 a 6)"))
+    NuevoM=Man(Num)
+    NuevoM.CargarE()
+    NuevoM.CargarG()
+    Cost=int(input("Ingresar el costo por m3:"))
+    Cant=int(input("Ingresa la cantidad a consumir en m3:"))
+    Aux1=NuevoM.MostrarG(Cost,Cant)
+    print("-------------------------------------------------")
+    Cost=int(input("Ingrese el costo por kilowatt/:"))
+    Cant=int(input("Ingrese la cantidad a consumir por Hora:"))
+    Aux2=NuevoM.MostrarE(Cost,Cant)
+    print("-------------------------------------------------")
+    print("El calefactor de menor consumo es:")
+    NuevoM.MostrarMenor(Aux1,Aux2)
